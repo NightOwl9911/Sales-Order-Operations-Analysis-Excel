@@ -49,11 +49,11 @@ For the completion of the project, the following tools were implemented:
 
 This project consists in 4 reports. For each one, there was a different data cleaning process implemented but a general one to prepare the data.
 
-1. 🛠️ General Data Cleaning 
+#### 1. 🛠️ General Data Cleaning 
 
-- Removed Duplicates: Based on the information available in the dataset, duplicate records were removed only when the following columns contained identical values: InvoiceNo, Quantity, InvoiceDate, and CustomerID.
+- **Removed Duplicates:** Based on the information available in the dataset, duplicate records were removed only when the following columns contained identical values: InvoiceNo, Quantity, InvoiceDate, and CustomerID.
 
-- Standardized Data Types: Several fields were converted to the appropriate data types to ensure consistency and accuracy throughout the analysis. The following transformations were applied in Power Query:
+- **Standardized Data Types:** Several fields were converted to the appropriate data types to ensure consistency and accuracy throughout the analysis. The following transformations were applied in Power Query:
 
 InvoiceDate: Text → Date
 
@@ -61,19 +61,70 @@ InvoiceNo: Any → Text
 
 CustomerID: Any → Text
 
-- Standardized Product Descriptions: During data validation, it was identified that some Stock Codes were associated with multiple product descriptions. To ensure consistency, descriptions were standardized by assigning the most frequently occurring description to each Stock Code. This approach helped maintain a single, consistent product description across the dataset while preserving the most representative value.
+- **Added Analytical Columns:** To support deeper analysis and reporting, three additional columns were created using the existing dataset information:
 
-2. ⚠️ Report 1 - Missing Customer Information
+    - **Cancelled Product?** – Identifies whether a transaction was cancelled or successfully processed by evaluating the invoice number pattern.
+    - **Sales** – Calculates the total sales value for each transaction by multiplying Unit Price by Quantity.
+    - **IDCustomer?** – Indicates whether a transaction is associated with a valid customer ID or contains a blank/null value, allowing for the analysis of identified versus unidentified customers.
 
-
-3. ❌ Report 2 - Order Cancellation Analysis
-
-
-4. 👥 Report 3 - Customer Analysis
+- **Standardized Product Descriptions:** During data validation, it was identified that some Stock Codes were associated with multiple product descriptions. To ensure consistency, descriptions were standardized by assigning the most frequently occurring description to each Stock Code. This approach helped maintain a single, consistent product description across the dataset while preserving the most representative value.
 
 
-5. 📦 Report 4 - Product Analysis
+**Clean Dataset**: After completing the general data cleaning process, the resulting dataset (Online Retail Clean) became the primary source for all subsequent analyses. The following reports and their associated queries were built using this cleaned dataset.
 
+#### 2. ⚠️ Report 1 - Missing Customer Information
+For this report, the Online Retail Clean dataset was used as the source query. The following transformations were performed:
+
+- Selected the IDCustomer? column previously created to distinguish transactions with and without a valid CustomerID.
+- Grouped the records to calculate the total number of transactions for each category.
+Pivoted the resulting values to convert the grouped categories from rows into columns for easier analysis.
+- Added a Total Transactions column to calculate the overall number of transactions.
+- Added a Missing Customer ID % column to calculate the percentage of transactions without an associated CustomerID.
+
+These steps enabled the identification and quantification of transactions lacking customer information, providing insight into the completeness and quality of the customer data.
+
+Query Names Used -> **Online Retail Clean** and **Transactions Query**
+
+
+#### 3. ❌ Report 2 - Order Cancellation Analysis
+
+For this report, the Online Retail Clean dataset was used as the source query. The following transformations were performed:
+
+- Retained only the relevant columns: InvoiceNo, StockCode, Description, Country, and Cancelled Product?.
+- Created a new column named Product Cancelled based on the values in the Cancelled Product? column.
+- Converted the original binary values (1 = Yes, 0 = No) into more user-friendly labels (Yes and No) to improve readability and facilitate analysis.
+- Removed the Cancelled Product? column after creating the new descriptive field, as it was no longer required.
+
+These transformations simplified the dataset and provided a clearer view of cancelled versus completed transactions, enabling a more intuitive cancellation analysis.
+
+Query Names Used -> **Cancellation Analysis** and **Cancellation Trend by Country**
+
+#### 4. 👥 Report 3 - Customer Analysis
+
+For this report, the Online Retail Clean dataset was used as the source query. The following transformations were performed:
+
+- Retained only the relevant columns: InvoiceNo, Cancelled Product?, Sales, and CustomerID.
+- Removed records with blank or null values in the CustomerID column to focus the analysis on identified customers.
+- Created a new descriptive field by converting the binary values in Cancelled Product? (1 = Yes, 0 = No) into more user-friendly labels (Yes and No) to improve readability and facilitate analysis.
+- Removed the original Cancelled Product? column after creating the new descriptive field, as it was no longer required.
+
+These transformations ensured that the dataset contained only valid customer transactions and provided a clearer framework for analyzing customer behavior, purchasing activity, and cancellation patterns.
+
+Query Name Used -> **Customer Order Sales**
+
+
+#### 5. 📦 Report 4 - Product Analysis
+
+For this report, the Online Retail Clean dataset was used as the source query. The following transformations were performed:
+
+- Filtered the Unit Price column to retain only records with values greater than 0, as it was identified that transactions with a Unit Price of 0 were associated with negative quantities and did not represent valid sales transactions.
+- Retained only the relevant columns: InvoiceNo, StockCode, PreferredDescription, Quantity, Cancelled Product?, and Sales.
+- Created a new descriptive field by converting the binary values in Cancelled Product? (1 = Yes, 0 = No) into more user-friendly labels (Yes and No) to improve readability and facilitate analysis.
+- Removed the original Cancelled Product? column after creating the new descriptive field, as it was no longer required.
+
+These transformations prepared the dataset for product-level analysis by excluding invalid transactions, simplifying cancellation indicators, and retaining only the fields necessary to evaluate product performance, sales trends, and order quantities.
+
+Query Name Used -> **Product Order Sales**
 
 ## 📊 Analysis
 
@@ -83,7 +134,43 @@ CustomerID: Any → Text
 ### 4. 📦 Report 4 - Product Analysis
 
 ## 💡 Key Skills Demonstrated
+Throughout this project, the following analytical, technical, and business skills were applied:
+
+- Data Cleaning
+- Data Validation
+- Business Analysis
+- Root Cause Analysis
+- Operational Reporting
+- KPI Development
+- Microsoft Excel
+- Power Query
+- Pivot Tables
+- Stakeholder-Oriented Reporting
+- Data Transformation
+- Data-Driven Decision Making
+- Performance Analysis
+- Insight Generation and Communication
+
+This project demonstrates the end-to-end process of transforming raw transactional data into actionable business insights through data preparation, analysis, and reporting.
 
 ## 🚀 Future Improvements 
 
-## ✅ Conclusion
+This project can be further enhanced by incorporating additional data sources and expanding the scope of the analysis. Potential future improvements include:
+
+- Customer Lifetime Value (CLV) Analysis – Evaluate the long-term value generated by each customer and identify high-value customer segments.
+- Revenue Lost Due to Cancellations – Quantify the financial impact of cancelled orders and identify patterns driving revenue loss.
+- Product Profitability Analysis – Analyze product-level profitability by incorporating cost and margin data.
+- Power BI Dashboard Version – Develop an interactive dashboard to enable dynamic exploration of key metrics and insights.
+- SQL Implementation – Recreate the data transformation and reporting process using SQL to demonstrate database querying and data modeling capabilities.
+- Geographical Sales Analysis – Explore sales performance across countries and regions to identify market opportunities and trends.
+- Customer Retention Analysis – Measure repeat purchase behavior and customer retention rates over time.
+
+These enhancements would provide deeper business insights and further strengthen the analytical value of the project.
+
+## ✅ Personal Takeaway
+
+This analysis reinforced the importance of evaluating products from multiple perspectives rather than relying on a single metric. Product performance should be assessed not only through sales volume and revenue contribution, but also through cancellation behavior and other operational indicators.
+
+For example, a product that generates substantial revenue may initially appear successful; however, if it also exhibits a high cancellation rate, it could represent a significant operational and financial risk. Such patterns may indicate underlying issues related to inventory availability, order fulfillment, product quality, or customer expectations.
+
+By combining these metrics, I can better identify high-impact areas, prioritize investigations, and recommend improvements that deliver meaningful business value. This approach enables more informed decision-making and supports continuous improvement across both operational and commercial processes.
