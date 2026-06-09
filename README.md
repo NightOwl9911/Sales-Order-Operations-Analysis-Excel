@@ -129,9 +129,34 @@ Query Name Used -> **Product Order Sales**
 ## 📊 Analysis
 
 ### 1. ⚠️ Report 1 - Missing Customer Information
+![Top 10 Products with Missing CustomerID](/images/Report%201/Top%2010%20Product%20with%20Missing%20CustomerID.png)
+
+![Total Transactions Analysis](/images/Report%201/Total%20Transactions%20Analysis.png)
+
+
 ### 2. ❌ Report 2 - Order Cancellation Analysis
+![Top 15 Highest Cancellation Rate Products](/images/Report%202/Top%2015%20Highest%20Cancellation%20Rate%20Products.png)
+
+![Countries with the Highest Cancellation Rate](/images/Report%202/Countries%20with%20the%20Highest%20Cancellation%20Rate.png)
+
+![Cancellation Trend](/images/Report%202/Cancellation%20Trend.png)
+![Cancellation Analysis](/images/Report%202/Cancellation%20Analysis.png)
+
+
 ### 3. 👥 Report 3 - Customer Analysis
+![Top 10 Customers By Revenue](/images/Report%203/Top%2010%20Customers%20By%20Revenue.png)
+![Top 10 Customer By Sales Volume](/images/Report%203/Top%2010%20Customer%20By%20Sales%20Volume.png)
+![Top 20 Customers by Cancellation Rate](/images/Report%203/Top%2020%20Customers%20by%20Cancellation%20Rate.png)
+
+
 ### 4. 📦 Report 4 - Product Analysis
+![Top 20 Products by Sales Volume](/images/Report%204/Top%2020%20Products%20by%20Sales%20Volumen.png)
+![Top 20 Products by Revenue](/images/Report%204/Top%2020%20Products%20by%20Revenue.png)
+![Top 20 Highest Cancellation Rate Products with Revenue](/images/Report%204/Top%2020%20Highest%20Cancellation%20Rate%20Products%20with%20Revenue.png)
+
+
+
+
 
 ## 💡 Key Skills Demonstrated
 Throughout this project, the following analytical, technical, and business skills were applied:
