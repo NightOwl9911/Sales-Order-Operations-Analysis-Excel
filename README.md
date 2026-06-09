@@ -129,7 +129,7 @@ Query Name Used -> **Product Order Sales**
 ## 📊 Analysis
 
 ### 1. ⚠️ Report 1 - Missing Customer Information
-![Top 10 Products with Missing CustomerID](/images/Report%201/Top%2010%20Product%20with%20Missing%20CustomerID.png)
+![Top 10 Products with Missing CustomerID](/images/Report%201/Top%2010.png)
 
 ![Total Transactions Analysis](/images/Report%201/Total%20Transactions%20Analysis.png)
 
@@ -149,7 +149,7 @@ A total of 3,836 orders were cancelled out of 25,900 orders, resulting in an ove
 
 The analysis identified several products with cancellation rates significantly above the overall average. After excluding non-sellable records such as Discount, Amazon Fee, Bank Charges, and Manual, the products with the highest cancellation rates were Cinderella Chandelier (29.41%), Set Of 3 Babushka Stacking Tins (28.57%), and Vintage Blue Kitchen Cabinet (22.22%). These products should be prioritized for further investigation to determine whether inventory constraints, pricing issues, fulfillment challenges, or customer purchasing behavior are contributing to the elevated cancellation rates.
 
-![Countries with the Highest Cancellation Rate](/images/Report%202/Countries%20with%20the%20Highest%20Cancellation%20Rate.png)
+![Countries with the Highest Cancellation Rate](/images/Report%202/Cancellation%20Rate%20by%20Country.png)
 
 Although the United Kingdom generated the highest number of cancelled orders, its cancellation rate (14.35%) remained close to the overall average due to its significantly higher order volume. Countries such as Japan (32.14%), Italy (30.91%), Switzerland (27.03%), and Germany (24.21%) exhibited substantially higher cancellation rates, suggesting potential operational or market-specific challenges that warrant further investigation.
 
@@ -161,14 +161,14 @@ Monthly trend analysis revealed that cancellations remained relatively stable th
 
 ### 3. 👥 Report 3 - Customer Analysis
 
-![Top 10 Customers By Revenue](/images/Report%203/Top%2010%20Customers%20By%20Revenue.png)
+![Top 10 Customers By Revenue](/images/Report%203/Customer%20by%20Revenue.png)
 
 The analysis identified the customers generating the highest revenue for the company. While these customers do not necessarily place the highest number of orders, they contribute significantly to overall business performance and revenue generation. Understanding their purchasing behavior and product preferences can help support revenue growth, customer retention, and strategic account management.
 
 **Key Finding:** Customer 14646 generated the highest revenue, contributing approximately $279,489.
 
 
-![Top 10 Customer By Sales Volume](/images/Report%203/Top%2010%20Customer%20By%20Sales%20Volume.png)
+![Top 10 Customer By Sales Volume](/images/Report%203/Customer%20by%20Sales%20Volume.png)
 
 The analysis identified the customers placing the highest number of orders. These customers represent a substantial share of operational activity and may require greater attention from customer service, order management, and fulfillment teams. Monitoring their ordering patterns can help improve demand planning and operational efficiency.
 
@@ -184,13 +184,13 @@ The analysis revealed a group of customers with exceptionally high cancellation 
 
 ### 4. 📦 Report 4 - Product Analysis
 
-![Top 20 Products by Sales Volume](/images/Report%204/Top%2020%20Products%20by%20Sales%20Volumen.png)
+![Top 20 Products by Sales Volume](/images/Report%204/Products%20by%20Sales%20Volume.png)
 
 The analysis identified the products generating the highest sales volume based on completed orders. These products represent the largest share of operational activity and therefore have the greatest impact on inventory management, warehouse operations, picking, packing, and fulfillment processes. Monitoring high-volume products is essential to ensure inventory availability and maintain operational efficiency.
 
 **Key Finding:** **Paper Craft**, **Little Birdie** and **Medium Ceramic Top Storage Jar** recorded the highest sales volumes, generating significant demand and operational workload across the fulfillment process.
 
-![Top 20 Products by Revenue](/images/Report%204/Top%2020%20Products%20by%20Revenue.png)
+![Top 20 Products by Revenue](/images/Report%204/Products%20by%20Revenue.png)
 
 The analysis identified the products contributing the most revenue to the business. While some overlap exists between high-volume and high-revenue products, the results confirm that products with the highest sales quantities do not necessarily generate the highest revenue. Understanding these products is critical for revenue protection and commercial performance.
 
@@ -206,7 +206,15 @@ The analysis identified products with the highest cancellation rates after exclu
 
 Analyzing products from multiple perspectives—including sales volume, revenue contribution, and cancellation behavior—provides a more comprehensive understanding of product performance. This approach helps identify operational bottlenecks, prioritize inventory and fulfillment improvements, protect revenue-generating products, and reduce avoidable cancellations. Combining these metrics enables organizations to focus improvement efforts where they can create the greatest operational and financial impact.
 
+## 📝 Executive Summary & Recommendations
 
+The analysis identified three primary operational risk areas: incomplete customer information, elevated order cancellation rates, and specific products and customers exhibiting abnormal cancellation behavior.
+
+Approximately 24.93% of transactions contained missing Customer IDs, limiting customer-level visibility and reducing the effectiveness of customer analytics. Additionally, 14.81% of all orders were cancelled, with certain products and countries exhibiting cancellation rates significantly above the overall average.
+
+The customer analysis revealed that high-revenue customers are not necessarily the same customers generating the highest transaction volume, highlighting the importance of evaluating customer value from multiple perspectives. Product analysis further demonstrated that high-volume products, high-revenue products, and high-cancellation products represent distinct operational categories that should be monitored independently.
+
+Based on these findings, the organization should prioritize improving customer data quality, investigating the root causes of order cancellations, and implementing monitoring frameworks for high-value customers and products. These actions can improve operational efficiency, forecasting accuracy, customer satisfaction, and revenue protection.
 
 ## 💡 Key Skills Demonstrated
 Throughout this project, the following analytical, technical, and business skills were applied:
