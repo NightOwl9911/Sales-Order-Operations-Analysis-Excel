@@ -1,5 +1,7 @@
 <h1 align="center">🟩 Sales Order Operations Analysis with Excel and Power Query </h1>
 
+![Dashboard](/images/Dashboard.png)
+
 
 ## 📋 Project Overview
 This project analyzes sales order transactions using Excel and Power Query to identify operational risks, customer behavior patterns, cancellation drivers, and product performance. The analysis simulates the type of investigations commonly performed by Sales Order Processing Analyst and Operations Analyst to support decision-making and process improvement.
@@ -147,11 +149,11 @@ A total of 3,836 orders were cancelled out of 25,900 orders, resulting in an ove
 
 ![Top 15 Highest Cancellation Rate Products](/images/Report%202/Top%2015%20Highest%20Cancellation%20Rate%20Products.png)
 
-The analysis identified several products with cancellation rates significantly above the overall average. After excluding non-sellable records such as Discount, Amazon Fee, Bank Charges, and Manual, the products with the highest cancellation rates were Cinderella Chandelier (29.41%), Set Of 3 Babushka Stacking Tins (28.57%), and Vintage Blue Kitchen Cabinet (22.22%). These products should be prioritized for further investigation to determine whether inventory constraints, pricing issues, fulfillment challenges, or customer purchasing behavior are contributing to the elevated cancellation rates.
+The analysis identified several products with cancellation rates significantly above the overall average. After excluding non-sellable records such as Discount, Amazon Fee, Bank Charges, and Manual, the products with the highest cancellation rates were Cinderella Chandelier (29.41%), Set Of 3 Babushka Stacking Tins (28.57%), and Vintage Blue Kitchen Cabinet (22.22%). These products should be prioritized for further investigation to determine whether inventory constraints, pricing issues, fulfillment challenges, or customer purchasing behavior are contributing to the elevated cancellation rates. (We studied products with 21 orders or more purchases)
 
 ![Countries with the Highest Cancellation Rate](/images/Report%202/Cancellation%20Rate%20by%20Country.png)
 
-Although the United Kingdom generated the highest number of cancelled orders, its cancellation rate (14.35%) remained close to the overall average due to its significantly higher order volume. Countries such as Japan (32.14%), Italy (30.91%), Switzerland (27.03%), and Germany (24.21%) exhibited substantially higher cancellation rates, suggesting potential operational or market-specific challenges that warrant further investigation.
+Although the United Kingdom generated the highest number of cancelled orders, its cancellation rate (14.35%) remained close to the overall average due to its significantly higher order volume. Countries such as Japan (32.14%), Italy (30.91%), Switzerland (27.03%), and Germany (24.21%) exhibited substantially higher cancellation rates, suggesting potential operational or market-specific challenges that warrant further investigation. (We studied countries with 25 orders or more purchases)
 
 ![Cancellation Trend](/images/Report%202/Cancellation%20Trend.png)
 
@@ -176,7 +178,7 @@ The analysis identified the customers placing the highest number of orders. Thes
 
 ![Top 20 Customers by Cancellation Rate](/images/Report%203/Top%2020%20Customers%20by%20Cancellation%20Rate.png)
 
-The analysis revealed a group of customers with exceptionally high cancellation rates, several exceeding 50% of their total orders. Frequent cancellations may indicate issues related to product availability, pricing, delivery expectations, order accuracy, or customer-specific purchasing behavior. These customers should be prioritized for further investigation to identify and address the underlying causes.
+The analysis revealed a group of customers with exceptionally high cancellation rates, several exceeding 50% of their total orders. Frequent cancellations may indicate issues related to product availability, pricing, delivery expectations, order accuracy, or customer-specific purchasing behavior. These customers should be prioritized for further investigation to identify and address the underlying causes. (We studied customers with 7 or more purchases)
 
 **Key Finding:** Customer 13115 exhibited the highest cancellation rate at 71.43%, with 10 cancelled orders out of 14 total orders.
 
@@ -198,7 +200,7 @@ The analysis identified the products contributing the most revenue to the busine
 
 ![Top 20 Highest Cancellation Rate Products with Revenue](/images/Report%204/Top%2020%20Highest%20Cancellation%20Rate%20Products%20with%20Revenue.png)
 
-The analysis identified products with the highest cancellation rates after excluding non-sellable records such as Discount, Samples, Amazon Fee, Bank Charges, and Manual. Several products exhibited cancellation rates significantly above the overall average, indicating potential operational and commercial risks. Elevated cancellation rates may be associated with inventory constraints, pricing issues, fulfillment challenges, product-specific demand patterns, or customer expectations.
+The analysis identified products with the highest cancellation rates after excluding non-sellable records such as Discount, Samples, Amazon Fee, Bank Charges, and Manual. Several products exhibited cancellation rates significantly above the overall average, indicating potential operational and commercial risks. Elevated cancellation rates may be associated with inventory constraints, pricing issues, fulfillment challenges, product-specific demand patterns, or customer expectations. (We studied products with 21 or more purchases)
 
 **Key Finding:** **Cinderella Chandelier** exhibited the highest cancellation rate among sellable products at 30.30%, followed by **Vintage Blue Kitchen Cabinet** (23.08%) and **Rococo Wall Mirror White** (20.69%).
 
